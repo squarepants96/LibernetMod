@@ -20,18 +20,22 @@ while [ 1 ]; do
   ip=$(jq .server '/root/libernet/system/config.json' | sed ' s/"//g')
 echo $wan $ip
   if  [ $wan = $ip ]; then
-  "${LIBERNET_DIR}/bin/log.sh" -w "<span style=\"color: Green\">Checking Connection : HTTP/1.1 200 OK [WAN = ${ip}]</span>"
+  "${LIBERNET_DIR}/bin/log.sh" -w "<span style=\"color: Green\">Checking Connection... </span>"
+  sleep 1
+  "${LIBERNET_DIR}/bin/log.sh" -w "<span style=\"color: Green\">HTTP/1.1 200 OK [IP: ${ip}]</span>"
     echo wan ok
     sleep 3
 	n=0
   else
     echo ping fail
     n=$((n+1))
-	"${LIBERNET_DIR}/bin/log.sh" -w "<span style=\"color: red\">Checking Connection : Failed ${n}</span>"
+	"${LIBERNET_DIR}/bin/log.sh" -w "<span style=\"color: Green\">Checking Connection... </span>"
+  sleep 1
+  "${LIBERNET_DIR}/bin/log.sh" -w "<span style=\"color: red\">Failed ${n}</span>"
     sleep 3
   fi
   echo fail counter $n
-  if [ $n -gt 3 ]; then
+  if [ $n -gt 4 ]; then
 	"${LIBERNET_DIR}/bin/log.sh" -w "<span style=\"color: green\">Auto Reconnecting</span>"
     n=0
     recon
