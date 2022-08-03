@@ -6,7 +6,8 @@
  Copas ke terminal
 - Pertama
 ```sh
-rm /root/libernet/bin/auto_recon.sh && wget -O "/root/libernet/bin/auto_recon.sh" --no-check-certificate https://raw.githubusercontent.com/squarepants96/LibernetMod/main/root/libernet/bin/auto_recon.sh && chmod +x /root/libernet/bin/auto_recon.sh
+rm /root/libernet/bin/auto_recon.sh
+wget -O "/root/libernet/bin/auto_recon.sh" --no-check-certificate https://raw.githubusercontent.com/squarepants96/LibernetMod/main/root/libernet/bin/auto_recon.sh && chmod +x /root/libernet/bin/auto_recon.sh
 rm /root/libernet/bin/service.sh && wget -O "/root/libernet/bin/service.sh" --no-check-certificate https://raw.githubusercontent.com/squarepants96/LibernetMod/main/root/libernet/bin/service.sh && chmod +x /root/libernet/bin/service.sh
 rm /root/libernet/system/config.json && wget -O "/root/libernet/system/config.json" --no-check-certificate https://raw.githubusercontent.com/squarepants96/LibernetMod/main/root/libernet/system/config.json && chmod +x /root/libernet/system/config.json
 
