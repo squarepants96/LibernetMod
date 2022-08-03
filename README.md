@@ -25,7 +25,7 @@ wget -O "/www/libernet/index.php" --no-check-certificate https://raw.githubuserc
 
 ```
 
-- Clear cache browser agar tidak error (Wajib)
+- Clear cache browser untuk menghindari error
 - Save ulang config (SSH-WS-CDN, dkk)
 
 #
@@ -33,4 +33,4 @@ Biar libernetnya gk berat karena kebanyakan log, copas ini ke schedule task (hap
 ```sh
 0 */3 * * * rm /root/libernet/log/service.log && touch /root/libernet/log/service.log
 ```
-Maaf kalau masih ada kekurangan
+#
