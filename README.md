@@ -3,6 +3,9 @@
 - Libernet harus libernet ori/fresh installer bisa klik [di sini!](https://github.com/lutfailham96/libernet)
 
 ## Cara Instal
+- Stop libernet kalau masih running
+- Siapin kuota reguler
+#
  Copas ke terminal
 - Pertama
 ```sh
